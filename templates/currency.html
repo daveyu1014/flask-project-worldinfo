@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界兌換匯率</title>
+    <link rel="stylesheet" href="../static/template.css">
+</head>
+
+<body>
+    <h1 class="header">全球匯率</h1>
+    <h2 style="text-align: center;"><a href="../">回主頁</a></h2>
+    <div class=exchange_form>
+        <form action="" method="POST" style=" text-align:center;">
+            <select name="from_currency" style=" font-size: 1rem;">
+                <option value="{{currency}}">{{from_currency}}</option>
+                {% for currency in values%}
+                <option value="{{currency}}">{{currency}}</option>
+                {%endfor%}
+            </select>
+            <input class="from" type="number" name="number" placeholder="{{number}}" style=" font-size: 1rem;
+                width:10rem; text-align: right;">
+            <button class="convert" style=" font-size: 1rem;">轉換</button>
+            <select name="to_currency" style=" font-size: 1rem;">
+                <option selected value="{{currency}}">{{to_currency}}</option>
+                {% for currency in values%}
+                <option value="{{currency}}">{{currency}}</option>
+                {%endfor%}
+            </select>
+            <input class="to" type="number" placeholder="{{total_amount}}"
+                style="font-size: 1rem; width: 10rem; text-align: right">
+            <!--<label for="">{{total_amount}}</label>-->
+        </form>
+    </div>
+    <h3 style="text-align:center;"><a href="https://rate.bot.com.tw/xrt?Lang=zh-TW">資料來源:台灣銀行牌告匯率</a></h3>
+    <section class="container">
+        {% if body%}
+        <table>
+            <thead>
+                <tr>
+                    {%for th in head%}
+                    <th>
+                        <p>{{th}}</p>
+                    </th>
+                    {%endfor%}
+                </tr>
+            </thead>
+            <tbody>
+                {%for row in body%}
+                <tr>
+                    {%for data in row%}
+                    <td>{{data}}</td>
+                    {%endfor%}
+                </tr>
+                {%endfor%}
+            </tbody>
+            {% else%}
+            <h2 style="text-align: center;">讀取失敗...</h2>
+            {% endif%}
+    </section>
+    <script src="../static/js/convert.js">
+    </script>
+</body>
+
+</html>

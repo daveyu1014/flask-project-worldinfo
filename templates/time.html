@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>即時世界時間</title>
+    <link href="國際時間/NES_Style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .style1 {
+            color: #0000FF
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        span {
+            color: #00F;
+        }
+
+        table {
+            border-radius: 3%;
+        }
+
+        .Text_12 tbody tr td font span {
+            color: #000;
+        }
+
+        input {
+            text-align: right;
+        }
+    </style>
+</HEAD>
+
+<BODY onload=javascript:GetTime();>
+    <h1 class="header">全球時間</h1>
+    <h2 style="text-align: center;"><a href="../">回主頁</a></h2>
+    <div></div>
+    <div></div>
+    <DIV align=center>
+        <CENTER>
+            <TABLE width=1000 border=0 cellPadding=0 cellSpacing=0 class="Text_12">
+                <FORM name=clock>
+                    <TBODY>
+                        <TR>
+                            <TD width="100%" height="38" colSpan=4 align=middle bgcolor="#4A85FF" class="Intertime">
+                                <P style="MARGIN-TOP: 11px"><SPAN style="LETTER-SPACING: 1pt">
+                                        <FONT color=#ffffff size=4>亞洲</FONT>
+                                    </SPAN></P>
+                            </TD>
+                        </TR>
+                        <TR>
+                        </TR>
+                        <tr bgcolor="#C1DCF0">
+                        <TR bgcolor="#C1DCF0">
+                            <TD align=right bgcolor="#C1DCF0"><span style="MARGIN-TOP: 5px">
+                                    <font size=2><span style="LETTER-SPACING: 1pt"><span
+                                                class="style1">台灣(台北)</span></span></font>
+                                    <font color=#666666 size=2><span style="LETTER-SPACING: 1pt">
+                                            <input size=8 name=taiwan>
+                                        </span></font>
+                                </span></TD>
+                            <TD align=right><span style="MARGIN-TOP: 5px">
+                                    <font color=#666666 size=2><span style="LETTER-SPACING: 1pt">日本(東京)
+                                            <input size=8 name=time001>
+                                        </span></font>
+                                </span></TD>
+                            <TD align=right><span style="MARGIN-TOP: 5px">
+                                    <font color=#666666 size=2><span style="LETTER-SPACING: 1pt">香港
+                                            <input size=8 name=time002>
+                                        </span></font>
+                                </span></TD>
+                            <TD align=right><span style="MARGIN-TOP: 5px">
+                                    <font color=#666666 size=2><span style="LETTER-SPACING: 1pt">韓國(首爾)
+                                            <input size=8 name=time003>
+                                        </span></font>
+                                </span></TD>
+                        </TR>
+                        <TR bgcolor="#C1DCF0">
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt; color: #000;">新加坡
+                                        <INPUT size=8 name=time004></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">馬來西亞(吉隆坡)
+                                        <INPUT size=8 name=time005></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">印尼(雅加達)
+                                        <INPUT size=8 name=time006></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">泰國(曼谷)
+                                        <INPUT size=8 name=time007></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR bgcolor="#C1DCF0">
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">菲律賓(馬尼拉)
+                                        <INPUT size=8 name=time008></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">緬甸(奈比多)
+                                        <INPUT size=8 name=time009></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">印度(新德里)
+                                        <INPUT size=8 name=time010></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">柬埔寨(金邊)
+                                        <INPUT size=8 name=time011></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR bgcolor="#C1DCF0">
+                            <TD width="25%" align=right>
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">越南(河內市) <INPUT size=8
+                                                name=time012></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">斯里蘭卡(可倫坡) <INPUT size=8
+                                                name=time013></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">尼泊爾(加德滿都)
+                                            <INPUT size=8 name=time014></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right>
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">汶萊(斯里巴加灣市) <INPUT
+                                                size=8 name=time015></SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR bgcolor="#C1DCF0">
+                            <TD width="100%" colSpan=4 align=middle bgcolor="#4A85FF" class="Intertime">
+                                <P style="MARGIN-TOP: 12px"><SPAN style="LETTER-SPACING: 1pt">
+                                        <FONT color=#ffffff size=4>美洲</FONT>
+                                    </SPAN></P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">美國阿拉斯加(朱諾) <INPUT
+                                                size=8 name=time016></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">阿根廷(布宜諾斯艾利斯) <INPUT
+                                                size=8 name=time017></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">巴西(巴西利亞) <INPUT size=8
+                                                name=time018></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">智利(聖地亞哥) <INPUT size=8
+                                                name=time019></SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">哥斯大黎加(聖荷西)
+                                        <INPUT size=8 name=time020></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">加拿大(渥太華)
+                                        <INPUT size=8 name=time021></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">薩爾瓦多
+                                        <INPUT size=8 name=time022></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">宏都拉斯(特古西加爾巴)
+                                        <INPUT size=8 name=time023></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">墨西哥(墨西哥城)
+                                        <INPUT size=8 name=time024></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">尼加拉瓜(馬拿瓜)
+                                        <INPUT size=8 name=time025></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">巴拿馬(巴拿馬城)
+                                        <INPUT size=8 name=time026></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">巴拉圭(亞松森)
+                                        <INPUT size=8 name=time027></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">祕魯(利馬) <INPUT size=8
+                                                name=time028></SPAN></FONT>
+                                </P>
+                            </TD>
+
+
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">美國(華盛頓) <INPUT size=8
+                                                name=time029></SPAN></FONT>
+                                </P>
+                            </TD>
+
+
+
+
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">美國(洛杉磯)<INPUT size=8
+                                                name=time082></SPAN></FONT>
+                                </P>
+                            </TD>
+
+
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">哥倫比亞(波哥大)
+                                            <INPUT size=8 name=time062>
+                                        </SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="100%" colSpan=4 align=middle bgcolor="#4A85FF" class="Intertime">
+                                <P style="MARGIN-TOP: 12px"><SPAN style="LETTER-SPACING: 1pt">
+                                        <FONT color=#ffffff size=4>歐洲</FONT>
+                                    </SPAN></P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">奧地利(維也納) <INPUT size=8
+                                                name=time030></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">比利時(布魯塞爾) <INPUT size=8
+                                                name=time031></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">保加利亞(索菲亞) <INPUT size=8
+                                                name=time032></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">捷克(布拉格) <INPUT size=8
+                                                name=time033></SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">丹麥(哥本哈根)
+                                        <INPUT size=8 name=time034></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">德國(柏林)
+                                        <INPUT size=8 name=time035></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">芬蘭(赫爾辛基)
+                                        <INPUT size=8 name=time036></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">法國(巴黎)
+                                        <INPUT size=8 name=time037></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">希臘(雅典)
+                                        <INPUT size=8 name=time038></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">匈牙利(布達佩斯)
+                                        <INPUT size=8 name=time039></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">冰島(雷克雅維克)
+                                        <INPUT size=8 name=time040></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">愛爾蘭(都柏林)
+                                        <INPUT size=8 name=time041></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">義大利(羅馬)
+                                        <INPUT size=8 name=time042></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">盧森堡(盧森堡市)
+                                        <INPUT size=8 name=time043></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">荷蘭(阿姆斯特丹)
+                                        <INPUT size=8 name=time044></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">挪威(奧斯陸)
+                                        <INPUT size=8 name=time045></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">波蘭(華沙)
+                                        <INPUT size=8 name=time046></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">葡萄牙(里斯本)
+                                        <INPUT size=8 name=time047></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">羅馬尼亞(布加勒斯特)
+                                        <INPUT size=8 name=time048></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">西班牙(馬德里)
+                                        <INPUT size=8 name=time049></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">瑞典(斯德哥爾摩)
+                                        <INPUT size=8 name=time050></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">瑞士
+                                        <INPUT size=8 name=time051></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">烏克蘭(基輔)
+                                        <INPUT size=8 name=time052></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">立陶宛(維爾紐斯)
+                                        <INPUT size=8 name=time053></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">英國(倫敦) <INPUT size=8
+                                                name=time054></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">梵蒂岡 <INPUT size=8
+                                                name=time055></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">俄羅斯(莫斯科) <INPUT size=8
+                                                name=time056></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">塞爾維亞(貝爾格勒) <INPUT
+                                                size=8 name=time057></SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="100%" colSpan=4 align=middle bgcolor="#4A85FF" class="Intertime">
+                                <P style="MARGIN-TOP: 12px"><SPAN style="LETTER-SPACING: 1pt">
+                                        <FONT color=#ffffff size=4>大洋洲</FONT>
+                                    </SPAN></P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px; MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">澳大利亞(堪培拉) <INPUT size=8
+                                                name=time058></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px; MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">斐濟(蘇瓦) <INPUT size=8
+                                                name=time059></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px; MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">紐西蘭(威靈頓) <INPUT size=8
+                                                name=time060></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px; MARGIN-BOTTOM: 3px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">　</SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="100%" colSpan=4 align=middle bgcolor="#4A85FF" class="Intertime">
+                                <P style="MARGIN-TOP: 12px"><SPAN style="LETTER-SPACING: 1pt">
+                                        <FONT color=#ffffff size=4>中亞/西亞/非洲</FONT>
+                                    </SPAN></P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">安哥拉(羅安達) <INPUT size=8
+                                                name=time061></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">南非(開普敦) <INPUT size=8
+                                                name=time083></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">埃及(開羅) <INPUT size=8
+                                                name=time063></SPAN></FONT>
+                                </P>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <P style="MARGIN-TOP: 5px">
+                                    <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">衣索比亞(阿迪斯阿貝巴) <INPUT
+                                                size=8 name=time064></SPAN></FONT>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">以色列(耶路撒冷)
+                                        <INPUT size=8 name=time065></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">亞美尼亞(葉里溫)
+                                        <INPUT size=8 name=time066></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">伊拉克(巴格達)
+                                        <INPUT size=8 name=time067></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">肯亞(奈洛比)
+                                        <INPUT size=8 name=time068></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">科威特(科威特市)
+                                        <INPUT size=8 name=time069></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">賴索托(馬塞盧)
+                                        <INPUT size=8 name=time070></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">賴比瑞亞(蒙羅維亞)
+                                        <INPUT size=8 name=time071></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">利比亞(的黎波里)
+                                        <INPUT size=8 name=time072></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">模里西斯(路易港)
+                                        <INPUT size=8 name=time073></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">卡達(杜哈)
+                                        <INPUT size=8 name=time074></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">摩洛哥(拉巴特)
+                                        <INPUT size=8 name=time075></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">奈及利亞(阿布加)
+                                        <INPUT size=8 name=time076></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">沙烏地阿拉伯(利雅德)
+                                        <INPUT size=8 name=time077></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">盧安達(吉佳利)
+                                        <INPUT size=8 name=time078></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">蘇丹(喀土穆)
+                                        <INPUT size=8 name=time079></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">敘利亞(大馬士革)
+                                        <INPUT size=8 name=time080></SPAN></FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">土耳其(安卡拉)
+                                        <INPUT size=8 name=time081></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">阿富汗(喀布爾) <INPUT size=8
+                                            name=time084></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">哈薩克(阿斯塔納) <INPUT size=8
+                                            name=time085></SPAN></FONT>
+                            </TD>
+                            <TD width="25%" align=right bgcolor="#C1DCF0">
+                                <FONT color=#666666 size=2><SPAN style="LETTER-SPACING: 1pt">烏茲別克(塔什干) <INPUT size=8
+                                            name=time086></SPAN></FONT>
+                            </TD>
+                        </TR>
+
+                    </TBODY>
+            </TABLE>
+            </FORM>
+        </CENTER>
+    </DIV>
+    <P align=center>　</P>
+    <script src="../static/js/time.js"></script>
+</BODY>
+
+</HTML>

@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  background-color: white;
+  margin: 0;
+	font-family: sans-serif;
+	font-weight: 100;
+}  
+
+h1{
+  text-align: center;
+}
+
+.date {
+  display: inline-block;
+  padding: 6px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 6px;
+  background-color: #06283d;
+  color: wheat;
+  text-align: center;
+}
+
+table {
+  border-radius:3px;
+  margin: 20px auto;
+  width: 80%;
+  font-family: Verdana;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+thead {
+  background-color: #495C83;
+  padding: 20px 0px;
+  color: #fcf8e8;
+  border-radius:3px;
+  font-size: 20px;
+  text-align: center;
+}
+
+td {
+  border-radius:2px;
+  background-color: rgba(255,255,255,0.2);
+  color: #354259;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  padding: 15px;
+  
+}
+
+tbody tr:hover {
+		 background-color: rgba(200,200,255,0.3);
+		}
+	
+tbody td:hover:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				z-index: -1;
+			}
+
+.sort {
+  border: none;
+  padding: 14px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: #F2EBE9;
+  background-color: #495C83;
+}
+
+.sort:hover {
+  border: none;
+  padding: 14px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: #F2EBE9;
+  background-color: #495C83;
+  text-decoration: underline
+}
+
+.bar{
+  text-align: center;
+  margin:0 20%;
+  
+}
+
+form .tableHead{
+  display: table-cell;
+}
+
+form .data{
+  border: none;
+  padding: 0 ;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: white;
+  color:#205375;
+}
+
+form .data:hover{
+  text-decoration: underline;
+  display: inline-block;
+  border: none;
+  padding: 0 ;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: white;
+  color:#205375;
+}
+
+a {
+  text-decoration: none;
+  padding: 0 ;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: white;
+  color:#205375;
+}
+
+a:hover{
+  text-decoration: underline;
+  display: inline-block;
+  border: none;
+  padding: 0 ;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: white;
+  color:#205375;
+}
+
+input[type="submit"]{
+  margin:10px;
+  margin: button 6px;
+  background-color:cadetblue;
+  color: aliceblue;
+  border-radius: 6px;
+  width:80px;
+  height:30px;
+}
+
+@media screen and (max-width:768px){
+  #container {
+    width: 100%;
+  }
+  table {
+    width:90%;
+  }
+  
+}
+
+
+
+
+  

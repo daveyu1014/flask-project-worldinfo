@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PM25</title>
+  <link rel="stylesheet" href="../static/template.css">
+</head>
+
+<body>
+  <h1 class="header">PM2.5全台資訊</h1>
+  <div style="text-align: center;">
+    <h2><a href="./taiwan">回上頁</a><a href="../">回主頁</a><a href="./pm25-chart">PM25圖表</a></h2>
+  </div>
+
+  <form action="/pm25" method="POST" style="text-align: center;">
+    <input type="submit" name="update" value="Update"></input>
+  </form>
+  <section>
+    {% if values%}
+    <table border="1">
+      <thead>
+        <tr>
+          {%for th in columns%}
+          <th>
+            <form class="tableHead" action="/pm25/{{th}}" method="GET">
+              <button class="sort" type="submit">{{th}}</button>
+            </form>
+          </th>
+          {%endfor%}
+        </tr>
+      </thead>
+      <tbody>
+        {%for row in values%}
+        <tr>
+          {%for data in row%}
+          <td>{{data}}</td>
+          {%endfor%}
+        </tr>
+        {%endfor%}
+      </tbody>
+      {% else%}
+      <h2>讀取失敗...</h2>
+      {% endif%}
+  </section>
+  <br />
+
+</body>
+
+</html>
